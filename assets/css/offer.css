@@ -1,0 +1,85 @@
+.offerBanner {
+  background: linear-gradient(to bottom right, #00A63E, transparent);
+  padding: 5rem 0;
+}
+
+.bannerContainer {
+  padding: 5rem 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .bannerContainer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bannerContainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.offerTitle {
+  font-size: 2.75rem;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.contentContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .contentContainer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentContainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.contentWrapper {
+  margin: 2.5rem 0;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1.25rem;
+  gap: 2rem;
+  align-items: center;
+}
+@media screen and (max-width:767px){
+  .contentGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.offerDescription {
+  font-size: 1.125rem;
+  text-align: justify;
+}
+
+.offerImage {
+  width: 100%;
+  border-radius: 4px;
+}
+.offerImage{
+  height: unset;
+  width: 100%;
+}

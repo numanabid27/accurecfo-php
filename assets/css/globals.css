@@ -1,0 +1,84 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Poppins", sans-serif;
+}
+
+.banner{
+  background-image: url("../img/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.parse_html h2{
+  font-weight: 700;
+  font-size: 24px;
+  padding: 20px 0;
+}
+.parse_html h3{
+  font-weight: 700;
+  font-size: 22px;
+  padding: 20px 0 0;
+}
+.parse_html p{
+  padding: 14px 0;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.parse_html ul{
+  padding-top: 10px;
+}
+.parse_html ul li span{
+  line-height: 1.5;
+  display: block;
+  font-size: 18px;
+}
+.parse_html ul li{
+  list-style-type: disc;
+  margin: 0 0px 0 19px;
+  font-size: 18px;
+}
+.parse_html ul li h6{
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  padding: 10px 0;
+
+}
+.MsoNormal{
+  line-height: 132% !important;
+}
+.MsoNormal span{
+  font-family: "Poppins", sans-serif !important;
+}
+ol{
+  padding-left: 18px;
+}
+@media screen and (max-width: 768px) {
+  .parse_html h2{
+    font-size: 20px;
+  }
+  .parse_html h3{
+    font-size: 18px;
+  }
+  .parse_html p, .parse_html ul li span, .parse_html ul li{
+    font-size: 16px;
+  }
+  .parse_html ul li h6{
+    font-size: 18px;
+  }
+}
+.leaflet-bottom{
+  display: none !important;
+}
