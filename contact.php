@@ -3,8 +3,11 @@
 require_once __DIR__ . '/includes/init.php';
 require_once __DIR__ . '/includes/icons.php';
 
-$pageTitle = 'Contact Us | ' . SITE_NAME;
-$pageDescription = 'Contact AccureCFO for professional bookkeeping and financial services.';
+set_page_meta(
+    'Contact AccureCFO | Bookkeeping Consultation',
+    'Contact AccureCFO for professional bookkeeping and financial services. Reach our Columbus, Ohio team by phone, email, or schedule a free consultation to streamline your business finances today.',
+    'contact'
+);
 $pageStyles = array_merge($pageStyles, ['banner.css', 'contact.css']);
 $pageScripts[] = 'contact.js';
 
@@ -61,7 +64,7 @@ render_page(function () {
                   <div class="iconContainer"><?= icon('phone', 24, '#00A63E') ?></div>
                   <div class="infoContent">
                     <h4>Phone</h4>
-                    <a href="tel:+16149607335">+1 (614) 960-7335</a>
+                    <a href="tel:+16149607335"<?= title_attr('Call AccureCFO at +1 (614) 960-7335') ?>>+1 (614) 960-7335</a>
                     <p class="small">Mon-Fri 9am-6pm EST</p>
                   </div>
                 </div>
@@ -69,7 +72,7 @@ render_page(function () {
                   <div class="iconContainer"><?= icon('mail', 24, '#00A63E') ?></div>
                   <div class="infoContent">
                     <h4>Email</h4>
-                    <a href="mailto:info@accurecfo.com">info@accurecfo.com</a>
+                    <a href="mailto:info@accurecfo.com"<?= title_attr('Email AccureCFO at info@accurecfo.com') ?>>info@accurecfo.com</a>
                     <p class="small">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -97,7 +100,7 @@ render_page(function () {
               <p class="ctaDescription">
                 Schedule a free consultation and see how we can help your business grow.
               </p>
-              <a href="https://calendly.com/arif-sheikh1125/30min" target="_blank" rel="noopener noreferrer" class="ctaBtn">
+              <a href="https://calendly.com/arif-sheikh1125/30min" target="_blank" rel="noopener noreferrer" class="ctaBtn"<?= title_attr('Schedule a free consultation with AccureCFO') ?>>
                 Schedule Free Consultation
               </a>
             </div>

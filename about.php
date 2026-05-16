@@ -3,8 +3,11 @@
 require_once __DIR__ . '/includes/init.php';
 require_once __DIR__ . '/includes/icons.php';
 
-$pageTitle = 'About | ' . SITE_NAME;
-$pageDescription = 'Learn about AccureCFO professional financial management and bookkeeping services.';
+set_page_meta(
+    'About AccureCFO | Expert Bookkeeping Team',
+    'Learn about AccureCFO professional financial management and bookkeeping services. Meet our certified team delivering accurate reporting, compliance, and growth-focused finance solutions for businesses.',
+    'about'
+);
 $pageStyles = array_merge($pageStyles, ['banner.css', 'about.css']);
 
 render_page(function () {
@@ -26,7 +29,7 @@ render_page(function () {
             </p>
           </div>
           <div class="aboutImage">
-            <img src="<?= e(asset('img/about1.jpg')) ?>" alt="Professional team working" class="aboutImageContent">
+            <img src="<?= e(asset('img/about1.jpg')) ?>" <?= img_alt_title('Professional team working') ?> class="aboutImageContent">
           </div>
         </div>
       </div>
@@ -59,7 +62,7 @@ render_page(function () {
             </p>
           </div>
         </div>
-        <img src="<?= e(asset('img/about.png')) ?>" alt="AccureCFO professional financial management team" class="bannerImage">
+        <img src="<?= e(asset('img/about.png')) ?>" <?= img_alt_title('AccureCFO professional financial management team') ?> class="bannerImage">
       </div>
 
       <div class="teamSection">
@@ -71,7 +74,7 @@ render_page(function () {
           <?php foreach ($TEAM as $member): ?>
           <div class="teamMember">
             <div class="memberImageContainer">
-              <img src="<?= e(asset('img/' . $member['image'])) ?>" alt="<?= e($member['name']) ?>" width="100" height="100" class="memberImage">
+              <img src="<?= e(asset('img/' . $member['image'])) ?>" <?= img_alt_title($member['name'] . ' - ' . $member['role']) ?> width="100" height="100" class="memberImage">
             </div>
             <h4 class="memberName"><?= e($member['name']) ?></h4>
             <p class="memberRole"><?= e($member['role']) ?></p>

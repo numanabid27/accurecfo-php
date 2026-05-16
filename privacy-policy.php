@@ -2,8 +2,11 @@
 
 require_once __DIR__ . '/includes/init.php';
 
-$pageTitle = 'Privacy Policy | ' . SITE_NAME;
-$pageDescription = 'AccureCFO privacy policy and terms and conditions.';
+set_page_meta(
+    'Privacy Policy & Terms | AccureCFO',
+    'Read AccureCFO privacy policy and terms and conditions. Learn how we protect client data, govern service use, and ensure confidentiality for bookkeeping and financial record-keeping services online.',
+    'privacy-policy'
+);
 $pageStyles = array_merge($pageStyles, ['privacy-policy.css']);
 
 render_page(function () {

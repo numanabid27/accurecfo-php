@@ -1,7 +1,17 @@
 <?php
 
 define('SITE_NAME', 'AccureCFO');
+define('SITE_AUTHOR', 'AccureCFO');
+define('SITE_LANGUAGE', 'English');
+define('META_ROBOTS', 'index, follow');
+define('META_REVISIT_AFTER', '7 days');
 define('SITE_URL', 'https://accurecfo.com');
+define('SITE_EMAIL', 'info@accurecfo.com');
+define('SITE_PHONE', '+16149607335');
+define('SITE_ADDRESS_LOCALITY', 'Columbus');
+define('SITE_ADDRESS_REGION', 'OH');
+define('SITE_ADDRESS_COUNTRY', 'US');
+define('SITE_ORG_DESCRIPTION', 'AccureCFO provides professional bookkeeping, financial reporting, payables and receivables management, cash flow management, and accounting software implementation for growing businesses. Columbus, Ohio-based experts supporting QuickBooks, Xero, and cloud accounting solutions for clients nationwide.');
 define('BLOGS_API', 'https://dashboard.accurecfo.com/api/blogs');
 define('BASE_PATH', dirname(__DIR__));
 define('INCLUDES_PATH', BASE_PATH . '/includes');
@@ -46,6 +56,15 @@ function url(string $path = ''): string
     }
 
     return ($base !== '' ? $base : '') . '/' . ltrim($path, '/');
+}
+
+function absolute_url(string $path = ''): string
+{
+    if ($path === '' || $path === '/') {
+        return rtrim(SITE_URL, '/') . '/';
+    }
+
+    return rtrim(SITE_URL, '/') . '/' . ltrim($path, '/');
 }
 
 function e(?string $value): string

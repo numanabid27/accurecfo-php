@@ -10,6 +10,7 @@ $routes = [
     '/pricing' => __DIR__ . '/pricing.php',
     '/privacy-policy' => __DIR__ . '/privacy-policy.php',
     '/blogs' => __DIR__ . '/blogs/index.php',
+    '/sitemap.xml' => __DIR__ . '/sitemap.php',
 ];
 
 if (isset($routes[$uri])) {
@@ -17,8 +18,8 @@ if (isset($routes[$uri])) {
     return true;
 }
 
-if (preg_match('#^/blogs/(\d+)$#', $uri, $m)) {
-    $_GET['id'] = $m[1];
+if (preg_match('#^/blogs/([^/]+)$#', $uri, $m)) {
+    $_GET['slug'] = $m[1];
     require __DIR__ . '/blogs/detail.php';
     return true;
 }

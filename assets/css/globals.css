@@ -65,6 +65,10 @@ body {
 ol{
   padding-left: 18px;
 }
+.bannerContent{
+  padding: 5rem 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .parse_html h2{
     font-size: 20px;

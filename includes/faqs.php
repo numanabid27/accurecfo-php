@@ -14,7 +14,7 @@
       </button>
       <div class="faqAnswer faqAnswerClosed" id="faq-answer-<?= (int) $index ?>" hidden>
         <div class="faqAnswerContent">
-          <?= $faq['answer'] ?>
+          <?= enhance_html_accessibility($faq['answer']) ?>
         </div>
       </div>
     </div>

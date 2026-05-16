@@ -104,13 +104,17 @@
 }
 
 .mobileNav {
-  display: block;
   padding: 1rem 0;
   border-top: 1px solid #e5e7eb;
 }
 
 @media (min-width: 768px) {
   .mobileNav {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .ctaButtons, .getStartedBtn {
     display: none;
   }
 }

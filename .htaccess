@@ -2,17 +2,20 @@ DirectoryIndex index.php
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /new-acc/
+  # Omit RewriteBase — Apache sets it from this .htaccess directory (/ on live, /new-acc/ locally)
 
   # Skip existing files and directories
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Blog detail: /new-acc/blogs/123
-  RewriteRule ^blogs/([0-9]+)/?$ blogs/detail.php?id=$1 [L,QSA]
+  # Sitemap
+  RewriteRule ^sitemap\.xml$ sitemap.php [L]
 
-  # Offer detail: /new-acc/offer-detail/slug
+  # Blog detail: /blogs/my-blog-title
+  RewriteRule ^blogs/([^/]+)/?$ blogs/detail.php?slug=$1 [L,QSA]
+
+  # Offer detail: /offer-detail/slug
   RewriteRule ^offer-detail/([^/]+)/?$ offer-detail/index.php?slug=$1 [L,QSA]
 
   # Blogs listing

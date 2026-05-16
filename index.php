@@ -3,6 +3,12 @@
 require_once __DIR__ . '/includes/init.php';
 require_once __DIR__ . '/includes/icons.php';
 
+set_page_meta(
+    SITE_NAME . ' | Professional Bookkeeping Services',
+    'Maintain financial records and handle bookkeeping professionally with AccureCFO. We manage business finances with expert reporting, reconciliation, and strategic insights for growing businesses nationwide.',
+    ''
+);
+
 $pageStyles = array_merge($pageStyles, ['banner.css', 'home.css', 'faqs.css', 'success.css']);
 $pageScripts[] = 'success-stories.js';
 
@@ -86,11 +92,11 @@ render_page(function () use ($benefits, $stepColors) {
           <?php foreach ($SERVICES as $service): ?>
           <div class="serviceCard">
             <div class="serviceIcon">
-              <img src="<?= e(asset('img/' . $service['icon'])) ?>" alt="<?= e($service['title']) ?>" style="width:4rem;height:4rem;">
+              <img src="<?= e(asset('img/' . $service['icon'])) ?>" <?= img_alt_title($service['title']) ?> style="width:4rem;height:4rem;">
             </div>
             <h3 class="serviceTitle"><?= e($service['title']) ?></h3>
             <p class="serviceDescription"><?= e($service['description']) ?></p>
-            <a href="<?= url('offer-detail/' . $service['slug']) ?>" class="learnMoreBtn">Learn More →</a>
+            <a href="<?= url('offer-detail/' . $service['slug']) ?>" class="learnMoreBtn"<?= title_attr('Learn more about ' . $service['title']) ?>>Learn More →</a>
           </div>
           <?php endforeach; ?>
         </div>
@@ -150,7 +156,7 @@ render_page(function () use ($benefits, $stepColors) {
               </li>
               <?php endforeach; ?>
             </ul>
-            <a href="<?= url('contact') ?>" class="planButton <?= $plan['popular'] ? 'primaryPlanBtn' : 'secondaryPlanBtn' ?>">Get Started</a>
+            <a href="<?= url('contact') ?>" class="planButton <?= $plan['popular'] ? 'primaryPlanBtn' : 'secondaryPlanBtn' ?>"<?= title_attr('Get started with ' . $plan['name']) ?>>Get Started</a>
           </div>
           <?php endforeach; ?>
         </div>
@@ -161,7 +167,7 @@ render_page(function () use ($benefits, $stepColors) {
       <div class="container" style="padding-top:0;">
         <h2 class="mainTitle" style="text-align:center;margin-bottom:50px;">Our Presence</h2>
         <div>
-          <img src="<?= e(asset('img/map.png')) ?>" alt="AccureCFO global presence and service locations map" style="width:100%;height:auto;object-fit:contain;">
+          <img src="<?= e(asset('img/map.png')) ?>" <?= img_alt_title('AccureCFO global presence and service locations map') ?> style="width:100%;height:auto;object-fit:contain;">
         </div>
       </div>
     </section>

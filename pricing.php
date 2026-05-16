@@ -3,8 +3,11 @@
 require_once __DIR__ . '/includes/init.php';
 require_once __DIR__ . '/includes/icons.php';
 
-$pageTitle = 'Pricing | ' . SITE_NAME;
-$pageDescription = 'Choose the plan that fits your business needs. Simple, transparent pricing with no hidden fees.';
+set_page_meta(
+    'AccureCFO Pricing | Transparent Bookkeeping Plans',
+    'Choose the AccureCFO plan that fits your business. Simple, transparent bookkeeping pricing with monthly reconciliation, financial statements, and expert support—no hidden fees or long-term contracts required.',
+    'pricing'
+);
 $pageStyles = array_merge($pageStyles, ['banner.css', 'pricing.css']);
 
 render_page(function () {
@@ -52,7 +55,7 @@ render_page(function () {
                     </li>
                     <?php endforeach; ?>
                   </ul>
-                  <a href="<?= url('contact') ?>" class="planButton <?= $plan['popular'] ? 'primaryPlanBtn' : 'secondaryPlanBtn' ?>">Get Started</a>
+                  <a href="<?= url('contact') ?>" class="planButton <?= $plan['popular'] ? 'primaryPlanBtn' : 'secondaryPlanBtn' ?>"<?= title_attr('Get started with ' . $plan['name']) ?>>Get Started</a>
                 </div>
                 <?php endforeach; ?>
               </div>
