@@ -37,6 +37,7 @@ function render_head(): void
     <meta name="robots" content="<?= e($robots) ?>">
     <meta name="language" content="<?= e(SITE_LANGUAGE) ?>">
     <meta name="revisit-after" content="<?= e(META_REVISIT_AFTER) ?>">
+    <meta name="google-site-verification" content="<?= e(GOOGLE_SITE_VERIFICATION) ?>">
     <link rel="canonical" href="<?= e($canonicalUrl) ?>">
     <meta property="og:type" content="<?= e($ogType) ?>">
     <meta property="og:site_name" content="<?= e(SITE_NAME) ?>">

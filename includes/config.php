@@ -5,6 +5,7 @@ define('SITE_AUTHOR', 'AccureCFO');
 define('SITE_LANGUAGE', 'English');
 define('META_ROBOTS', 'index, follow');
 define('META_REVISIT_AFTER', '7 days');
+define('GOOGLE_SITE_VERIFICATION', '6XHStb5sIuIY54NCND-IMkkwhx0WRRKlVR9goeC0i18');
 define('SITE_URL', 'https://accurecfo.com');
 define('SITE_EMAIL', 'info@accurecfo.com');
 define('SITE_PHONE', '+16149607335');

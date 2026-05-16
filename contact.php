@@ -18,9 +18,9 @@ render_page(function () {
     <section class="contactSection">
       <?php require INCLUDES_PATH . '/banner.php'; ?>
       <div class="container">
-        <div class="sectionTitle">
+        <div class="sectionTitle" style="margin-top:55px;">
           <h2 class="mainTitle">Ready to Step Up for Success?</h2>
-          <p class="description">
+          <p style="">
             Experience financial transparency to maximize your business's profit. Our professionals are ready to uplift accounting standards
           </p>
         </div>
